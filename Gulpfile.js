@@ -10,7 +10,8 @@ var gulp         = require('gulp'),
 
 var onError = function (err) {
   gutil.beep();
-  gutil.log(gutil.colors.red(err));
+  gutil.log(gutil.colors.red(err.message));
+  this.emit( "end" );
 };
 
 // JS
