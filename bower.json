@@ -1,0 +1,8 @@
+{
+  "name": "burgermenu",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "~1.11"
+  }
+}
