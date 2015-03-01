@@ -12,7 +12,7 @@ In order to use BurgerMenu, you must include the JavaScript and CSS files to you
 
 ### Downloading the code locally
 
-You can download the last [script](https://github.com/vortizhe/burgermenu/blob/master/dist/jquery.burgermenu.min.js) and [styles](https://github.com/vortizhe/burgermenu/blob/master/dist/burgermenu.css) version from GitHub.
+You can download the last [script](https://raw.githubusercontent.com/vortizhe/burgermenu/master/dist/jquery.burgermenu.min.js) and [styles](https://raw.githubusercontent.com/vortizhe/burgermenu/master/dist/burgermenu.css) version from GitHub.
 
 Or you can clone from [BurgerMenu GitHub repository](https://github.com/vortizhe/burgermenu) and copy the `/dist` directory to your project:
 
