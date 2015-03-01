@@ -2,15 +2,15 @@
 
   <div class="wrapper">
 
-    <a class="logo" href="/">
+    <a class="logo" href="{{ site.baseurl }}/">
       BurgerMenu
     </a>
 
     <nav class="site-nav">
-      <a href="/"{% if page.slug == "home" %} class="active"{% endif %}>Home</a>
-      <a href="/get-started.html"{% if page.slug == "get-started" %} class="active"{% endif %}>Get started</a>
-      <a href="/options.html"{% if page.slug == "options" %} class="active"{% endif %}>Options</a>
-      <a href="/examples.html"{% if page.slug == "demos" %} class="active"{% endif %}>Examples</a>
+      <a href="{{ site.baseurl }}/"{% if page.slug == "home" %} class="active"{% endif %}>Home</a>
+      <a href="{{ site.baseurl }}/get-started.html"{% if page.slug == "get-started" %} class="active"{% endif %}>Get started</a>
+      <a href="{{ site.baseurl }}/options.html"{% if page.slug == "options" %} class="active"{% endif %}>Options</a>
+      <a href="{{ site.baseurl }}/examples.html"{% if page.slug == "demos" %} class="active"{% endif %}>Examples</a>
     </nav>
   </div>
 </header>
