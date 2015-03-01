@@ -38,5 +38,5 @@ Requires jQuery 1.6+
 
 * Check out the [get started page]({{ site.baseurl }}/get-started.html) to learn how to install and initialize a menu.
 * Look at available [examples]({{ site.baseurl }}/examples.html) to see it working.
-* Go to [options]({{ site.baseurl }}/options.html) to learn more about BurgerMenu and how to customize it.
+* Go to [API Page]({{ site.baseurl }}/api.html) to learn more about BurgerMenu and how to customize it.
 * If you found bugs or have any questions, don't hesitate to create an issue on [GitHub](https://github.com/vortizhe/burgermenu/issues).
