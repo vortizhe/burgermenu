@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  background: #fff;
+  font-size: 14px;
+  th,
+  td {
+    border: 1px solid $border;
+    padding: 5px;
+    color: $text;
+  }
+  th {
+    background: #f5f5f5;
+    color: $dark_text;
+  }
+  tbody {
+    td:first-child,
+    td:nth-child(3) {
+      font-family: 'Inconsolata', monospace;
+      color: #8C2418;
+    }
+    td:nth-child(2) {
+      color: #006700;
+    }
+  }
+}

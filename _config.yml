@@ -10,4 +10,6 @@ url: "http://vortizhe.github.io/burgermenu"
 markdown: redcarpet
 highlighter: pygments
 fenced_code_blocks: true
+redcarpet:
+ extensions: ["fenced_code_blocks", "tables"]
 github: [Repository metadata]
