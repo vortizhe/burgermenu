@@ -3,10 +3,28 @@ body {
   color: $text;
 }
 
+h1 {
+  font-size: 33px;
+  font-weight: 300;
+  color: $dark_text;
+}
+
+h2 {
+  font-size: 33px;
+  font-weight: 300;
+  color: $link;
+}
+
+h3 {
+  border-bottom: 1px solid $border;
+  font-size: 24px;
+  font-weight: 400;
+  color: $text;
+}
+
 p {
   font-size: 16px;
   line-height: 1.3;
-  color: lighten($text, 15%);
 }
 
 a {
@@ -20,20 +38,11 @@ code {
   background: #FFF;
 }
 
-h1 {
-  font-size: 33px;
-  font-weight: 300;
-  color: lighten($text, 15%);
-}
-
-h2 {
-  font-size: 33px;
-  font-weight: 300;
-  color: $link;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 400;
-  border-bottom: 1px solid $border;
+.page-content {
+  ul {
+    padding-left: 1em;
+    li {
+      list-style-image: url('../images/li-bullet.png');
+    }
+  }
 }
