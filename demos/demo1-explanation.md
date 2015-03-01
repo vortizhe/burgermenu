@@ -1,9 +1,6 @@
----
-layout: demo
-title: Example 1 - BurgerMenu
-slug: examples
----
+### HTML
 
+```html
 <nav id="menu-example" class="burgermenu-left">
   <ul>
     <li><a href="#">Home</a></li>
@@ -28,11 +25,14 @@ slug: examples
 </nav>
 
 <div class="page-wrapper">
-  <a id="menu-toggle" href="#menu-example" class="menu-icon">Toggle Menu</a>
+  <a id="menu-toggle" href="#menu-example">Toggle Menu</a>
 </div>
+```
 
-<script type="text/javascript">
-  $(function() {
-    $('#menu-example').burgermenu();
-  });
-</script>
+### JS
+
+```js
+$(function() {
+  $('#menu-example').burgermenu();
+});
+```

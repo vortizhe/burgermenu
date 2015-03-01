@@ -1,10 +1,7 @@
----
-layout: demo
-title: Example 1 - BurgerMenu
-slug: examples
----
+### HTML
 
-<nav id="menu-example" class="burgermenu-left">
+```html
+<nav id="menu-example1" class="burgermenu-left">
   <ul>
     <li><a href="#">Home</a></li>
     <li class="has-children">
@@ -27,12 +24,31 @@ slug: examples
   </ul>
 </nav>
 
-<div class="page-wrapper">
-  <a id="menu-toggle" href="#menu-example" class="menu-icon">Toggle Menu</a>
-</div>
+<nav id="menu-example2" class="burgermenu-right">
+  <ul>
+      <li><a href="#">First element</a></li>
+      <li><a href="#">Second element</a></li>
+      <li><a href="#">Third element</a></li>
+    </ul>
+</nav>
 
-<script type="text/javascript">
-  $(function() {
-    $('#menu-example').burgermenu();
+<div class="page-wrapper">
+  <a id="menu-toggle1" href="#menu-example1" class="menu-icon">Toggle Menu</a>
+  <a id="menu-toggle2" href="#menu-example2" class="menu-icon right">Toggle Menu</a>
+</div>
+```
+
+### JS
+
+```js
+$(function() {
+  $('#menu-example1').burgermenu({
+    toggle_selector: '#menu-toggle1'
   });
-</script>
+
+  $('#menu-example2').burgermenu({
+    position: 'right',
+    toggle_selector: '#menu-toggle2'
+  });
+});
+```

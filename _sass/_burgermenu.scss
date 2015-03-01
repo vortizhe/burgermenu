@@ -30,6 +30,8 @@ body {
     bottom: 0;
     left: $menu-width;
     width: $menu-width;
+    overflow-x: hidden;
+    overflow-y: auto;
     z-index: 2;
     transition: all 0.6s ease;
   }

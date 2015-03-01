@@ -4,4 +4,53 @@ title: Examples - BurgerMenu
 slug: examples
 ---
 
-<iframe src="{{ site.baseurl }}/demos/demo1.html" class="example"></iframe>
+<h1>Menu Examples</h1>
+
+<div class="example">
+  <h2>Default menu with horizontal submenu panel and dropdown list</h2>
+  <div class="demo">
+    <a href="{{ site.baseurl }}/demos/demo1.html" target="_blank" class="demo-link">Open in new window</a>
+    <iframe src="{{ site.baseurl }}/demos/demo1.html"></iframe>
+  </div>
+  <div class="explanation">
+    {% capture demo1 %}{% include_relative demos/demo1-explanation.md %}{% endcapture %}
+    {{ demo1 | markdownify }}
+  </div>
+</div>
+
+<div class="example">
+  <h2>Simple menu on right</h2>
+  <div class="demo">
+    <a href="{{ site.baseurl }}/demos/demo2.html" target="_blank" class="demo-link">Open in new window</a>
+    <iframe src="{{ site.baseurl }}/demos/demo2.html"></iframe>
+  </div>
+  <div class="explanation">
+    {% capture demo2 %}{% include_relative demos/demo2-explanation.md %}{% endcapture %}
+    {{ demo2 | markdownify }}
+  </div>
+</div>
+
+<div class="example">
+  <h2>All together</h2>
+  <div class="demo">
+    <a href="{{ site.baseurl }}/demos/demo3.html" target="_blank" class="demo-link">Open in new window</a>
+    <iframe src="{{ site.baseurl }}/demos/demo3.html"></iframe>
+  </div>
+  <div class="explanation">
+    {% capture demo3 %}{% include_relative demos/demo3-explanation.md %}{% endcapture %}
+    {{ demo3 | markdownify }}
+  </div>
+</div>
+
+<div class="example">
+  <h2>Not just navigation</h2>
+  <p>You can place whatever you want on panels, a banner, a search form...</p>
+  <div class="demo">
+    <a href="{{ site.baseurl }}/demos/demo4.html" target="_blank" class="demo-link">Open in new window</a>
+    <iframe src="{{ site.baseurl }}/demos/demo4.html"></iframe>
+  </div>
+  <div class="explanation">
+    {% capture demo4 %}{% include_relative demos/demo4-explanation.md %}{% endcapture %}
+    {{ demo4 | markdownify }}
+  </div>
+</div>
