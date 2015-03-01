@@ -1,0 +1,35 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: rgba(#fff, 0.9);
+  border-bottom: 1px solid $border;
+  .wrapper {
+    padding: 0;
+  }
+  .logo {
+    display: block;
+    float: left;
+    padding: 45px 0 35px 112px;
+    background: url('/images/logo.png') no-repeat left center;
+    border: 0;
+    color: lighten($text, 15%);
+    font-size: 32px;
+    font-weight: 300;
+  }
+  .site-nav {
+    float: right;
+    padding: 45px 0 35px;
+    a {
+      display: inline-block;
+      padding: 7px 10px;
+      border-bottom: 2px solid transparent;
+      font-size: 18px;
+      color: rgba($link, 0.6);
+      &.active {
+        color: $link;
+      }
+    }
+  }
+}

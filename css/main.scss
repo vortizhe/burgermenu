@@ -1,0 +1,29 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+$text: #1E1D1D;
+$bg: #F5F5F5;
+$link: #F05220;
+$border: #E7E7EC;
+
+$small-desktop: 1230px;
+$tablet: 1024px;
+$mobile: 767px;
+
+@mixin media($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+
+
+@import "normalize";
+@import "typography";
+@import "layout";
+@import "header";
+@import "footer";
+@import "syntax-highlighting";

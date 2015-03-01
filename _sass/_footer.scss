@@ -1,0 +1,12 @@
+.site-footer {
+  background: #fff;
+  border-top: 1px solid $border;
+  .copy {
+    margin: 0;
+    font-size: 16px;
+    color: lighten($text, 35%);
+    a {
+      border-bottom: 0;
+    }
+  }
+}
