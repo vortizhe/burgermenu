@@ -1,0 +1,19 @@
+.example {
+  width: 320px;
+  height: 480px;
+  border: 1px solid $border;
+}
+
+.burgermenu-left {
+  background: #dfdfdf;
+  li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    a {
+      border-bottom: 0;
+    }
+  }
+  .is-children {
+    background: #efefef
+  }
+}

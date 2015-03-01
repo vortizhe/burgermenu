@@ -9,9 +9,8 @@ $bg: #F5F5F5;
 $link: #F05220;
 $border: #E7E7EC;
 
-$small-desktop: 1230px;
+$small-desktop: 1200px;
 $tablet: 1024px;
-$mobile: 767px;
 
 @mixin media($breakpoint) {
     @media only screen and (max-width: $breakpoint) {
@@ -19,11 +18,11 @@ $mobile: 767px;
     }
 }
 
-
-
 @import "normalize";
 @import "typography";
 @import "layout";
 @import "header";
 @import "footer";
 @import "syntax-highlighting";
+@import "examples";
+@import "burgermenu";

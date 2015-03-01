@@ -60,7 +60,7 @@ In your layout html file:
 <body>
     ...
 </body>
-</html> 
+</html>
 ```
 
 ## 3. Add menu html structure
@@ -69,30 +69,30 @@ Now we need a basic navigation structure somewhere inside body tag.
 
 ```html
 <body>
-...
-<nav id="menu-example">
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li class="has-children">
-      <a href="#">Slide Panel Submenu</a>
-      <ul class="is-children">
-        <li><a href="#">Back</a></li>
-        <li><a href="#">Submenu element</a></li>
-        <li><a href="#">Submenu element</a></li>
-        <li><a href="#">Submenu element</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#">Dropdown Submenu</a>
-      <ul class="is-children">
-        <li><a href="#">Dropdown element</a></li>
-        <li><a href="#">Dropdown element</a></li>
-        <li><a href="#">Dropdown element</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-...
+  ...
+  <nav id="menu-example" class="burgermenu-left">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="has-children">
+        <a href="#">Slide Panel Submenu</a>
+        <ul class="is-children">
+          <li class="back"><a href="#">&lt; Back</a></li>
+          <li><a href="#">Submenu element</a></li>
+          <li><a href="#">Submenu element</a></li>
+          <li><a href="#">Submenu element</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Dropdown Submenu</a>
+        <ul>
+          <li><a href="#">Dropdown element</a></li>
+          <li><a href="#">Dropdown element</a></li>
+          <li><a href="#">Dropdown element</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  ...
 </body>
 ```
 
