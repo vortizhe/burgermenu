@@ -16,6 +16,7 @@ body {
   z-index: 0;
   overflow: hidden;
   transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
   ul {
     overflow-x: hidden;
     overflow-y: auto;
@@ -34,10 +35,12 @@ body {
     overflow-y: auto;
     z-index: 2;
     transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
   }
   .has-children {
     &.opened > .is-children {
       transform: translate3d(-$menu-width, 0, 0);
+      -webkit-transform: translate3d(-$menu-width, 0, 0);
     }
   }
   a {
@@ -53,11 +56,13 @@ body {
 .burgermenu-left {
   @extend %burgermenu;
   transform: translate3d(-$menu-width, 0, 0);
+  -webkit-transform: translate3d(-$menu-width, 0, 0);
   left: 0;
 }
 .burgermenu-right {
   @extend %burgermenu;
   transform: translate3d($menu-width, 0, 0);
+  -webkit-transform: translate3d($menu-width, 0, 0);
   right: 0;
 }
 
@@ -65,6 +70,7 @@ body {
   position: relative;
   z-index: 1;
   transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
 }
 
 .opened-left {
@@ -72,9 +78,11 @@ body {
   .page-wrapper {
     overflow: hidden;
     transform: translate3d($menu-width, 0, 0);
+    -webkit-transform: translate3d($menu-width, 0, 0);
   }
   .burgermenu-left {
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 .opened-right {
@@ -82,8 +90,10 @@ body {
   .page-wrapper {
     overflow: hidden;
     transform: translate3d(-$menu-width, 0, 0);
+    -webkit-transform: translate3d(-$menu-width, 0, 0);
   }
   .burgermenu-right {
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
