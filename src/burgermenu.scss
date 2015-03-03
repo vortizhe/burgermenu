@@ -4,6 +4,10 @@ $menu-width: 273px !default;
 
 
 // Layout styles
+body {
+  overflow-x: hidden;
+}
+
 %burgermenu {
   width: $menu-width;
   position: fixed;
@@ -11,7 +15,8 @@ $menu-width: 273px !default;
   bottom: 0;
   z-index: 0;
   overflow: hidden;
-  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
   ul {
     overflow-x: hidden;
     overflow-y: auto;
@@ -27,12 +32,18 @@ $menu-width: 273px !default;
     left: $menu-width;
     width: $menu-width;
     z-index: 2;
-    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+            transition: all 0.6s ease;
   }
   .has-children {
     &.opened > .is-children {
-      transform: translate3d(-$menu-width, 0, 0);
       -webkit-transform: translate3d(-$menu-width, 0, 0);
+              transform: translate3d(-$menu-width, 0, 0);
+    }
+  }
+  .dropdown {
+    ul {
+      display: none;
     }
   }
   a {
@@ -42,48 +53,45 @@ $menu-width: 273px !default;
 
 .burgermenu-left {
   @extend %burgermenu;
-  transform: translate3d(-$menu-width, 0, 0);
   -webkit-transform: translate3d(-$menu-width, 0, 0);
+          transform: translate3d(-$menu-width, 0, 0);
   left: 0;
 }
 .burgermenu-right {
   @extend %burgermenu;
-  transform: translate3d($menu-width, 0, 0);
   -webkit-transform: translate3d($menu-width, 0, 0);
+          transform: translate3d($menu-width, 0, 0);
   right: 0;
 }
 
 .page-wrapper {
   position: relative;
-  z-index: 1;
-  transition: all 0.6s ease;
+  z-index: 10;
   -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
 }
 
 .opened-left {
   overflow: hidden;
   .page-wrapper {
     overflow: hidden;
-    transform: translate3d($menu-width, 0, 0);
     -webkit-transform: translate3d($menu-width, 0, 0);
+            transform: translate3d($menu-width, 0, 0);
   }
   .burgermenu-left {
-    transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 .opened-right {
   overflow: hidden;
-  body {
-    overflow-x: hidden;
-  }
   .page-wrapper {
     overflow: hidden;
-    transform: translate3d(-$menu-width, 0, 0);
     -webkit-transform: translate3d(-$menu-width, 0, 0);
+            transform: translate3d(-$menu-width, 0, 0);
   }
   .burgermenu-right {
-    transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
