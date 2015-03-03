@@ -4,7 +4,6 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'),
     uglify       = require('gulp-uglify'),
     sass         = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
     sourcemaps   = require('gulp-sourcemaps'),
     livereload   = require('gulp-livereload');
 
@@ -34,10 +33,6 @@ gulp.task('sass', function() {
   .pipe(plumber({ errorHandler: onError }))
   .pipe(sourcemaps.init())
   .pipe(sass())
-  .pipe(autoprefixer({
-    "browsers": ['> 1%', 'last 3 versions', 'Firefox >= 20', 'Android > 4', 'iOS > 6'],
-    "remove": false
-  }))
   .pipe(sourcemaps.write('./maps'))
   .pipe(gulp.dest('./dist'))
   .pipe(livereload());
