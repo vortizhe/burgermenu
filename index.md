@@ -19,7 +19,7 @@ It's intended to be used in mobile or responsive websites/webapps.
 * **Multi-level submenus** support.
 * **Horizonal sliding panels** or **slide down lists**.
 * Easily **customizable** with css.
-* **Cross-browser compatibilty**. Designed for Webkit browsers but works fine on Firefox and IE8+.
+* **Cross-browser compatibilty**. Designed for Webkit browsers but works fine on Firefox and IE9+.
 
 ## Requeriments & Browser support
 
@@ -32,7 +32,7 @@ Requires jQuery 1.6+
 * Firefox
 * Opera
 * Android Browser
-* IE8+
+* IE9+
 
 ## How can I start using it?
 
