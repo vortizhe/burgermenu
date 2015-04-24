@@ -29,7 +29,7 @@ body {
   .burgermenu-left .has-children.opened > .is-children, .burgermenu-right .has-children.opened > .is-children {
     -webkit-transform: translate3d(-273px, 0, 0);
     transform: translate3d(-273px, 0, 0); }
-  .burgermenu-left .dropdown ul, .burgermenu-right .dropdown ul {
+  .burgermenu-left .dropdown > ul, .burgermenu-right .dropdown > ul {
     display: none; }
   .burgermenu-left a, .burgermenu-right a {
     display: block; }
