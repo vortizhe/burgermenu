@@ -37,12 +37,15 @@
         $html = $('html'),
         opts = this.options;
 
+    $html.find('body').append('<div id="burgermenu-blocker"/>');
     // Bind open/close menu event burgermenu.toggle to element menu
     $el.bind('burgermenu.toggle', function() {
       $html.toggleClass('opened-' + opts.position);
     });
-    $document.on('click', opts.toggle_selector, function(e) {
+
+    $document.on('click touchstart', '#burgermenu-blocker, ' + opts.toggle_selector, function(e) {
       e.preventDefault();
+      e.stopPropagation();
       $el.trigger('burgermenu.toggle');
     });
 
