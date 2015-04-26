@@ -1,0 +1,40 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.burgermenu-left ul {
+  background: #ECECEC;
+}
+.burgermenu-left .dropdown > ul {
+  padding: 10px 0;
+}
+.burgermenu-left li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #AFAFAF;
+}
+.burgermenu-left ul ul {
+  background: #DFDFDF;
+}
+
+#burgermenu-toggle {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #AFAFAF;
+  text-decoration: none;
+  z-index: 11;
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+}
+
+.page-wrapper {
+  padding: 50px 0 0;
+}

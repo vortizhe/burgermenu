@@ -5,7 +5,8 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify'),
     sass         = require('gulp-sass'),
     sourcemaps   = require('gulp-sourcemaps'),
-    livereload   = require('gulp-livereload');
+    livereload   = require('gulp-livereload'),
+    connect      = require('gulp-connect');
 
 var onError = function (err) {
   gutil.beep();
@@ -24,6 +25,7 @@ gulp.task('uglifyjs', function() {
   .pipe(rename({suffix: '.min'}))
   .pipe(sourcemaps.write('./maps'))
   .pipe(gulp.dest('./dist'))
+  .pipe(gulp.dest('./demo/js'))
   .pipe(livereload());
 });
 
@@ -35,19 +37,24 @@ gulp.task('sass', function() {
   .pipe(sass())
   .pipe(sourcemaps.write('./maps'))
   .pipe(gulp.dest('./dist'))
+  .pipe(gulp.dest('./demo/css'))
   .pipe(livereload());
 });
 
 // HTML
-gulp.task('html', function() {
+gulp.task('demo', function() {
   return gulp.src('./demo/index.html')
-  .pipe(livereload());
+    .pipe(connect.reload());
 });
 
 // Default watcher
 gulp.task('default', function() {
-  // LiveReload
-  livereload.listen();
+  // Start demo server
+  connect.server({
+    root: 'demo',
+    port: 8765,
+    livereload: true
+  });
 
   // Watch JS
   gulp.watch('./src/burgermenu.js', ['uglifyjs']);
@@ -56,10 +63,10 @@ gulp.task('default', function() {
   gulp.watch('./src/burgermenu.scss', ['sass']);
 
   // Watch HTML and livereload
-  gulp.watch('./demo/index.html', ['html']);
+  gulp.watch(['./demo/index.html', './demo/css/demo.css'], ['demo']);
 
   // Watch Gulpconfig
-  gulp.watch('./Gulpfile.js', ['uglifyjs', 'sass', 'html']);
+  gulp.watch('./Gulpfile.js', ['uglifyjs', 'sass', 'demo']);
 });
 
 // Manually build all

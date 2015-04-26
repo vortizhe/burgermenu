@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BurgerMenu - jQuery mobile menu</title>
+
+    <link rel="stylesheet" href="./css/burgermenu.css">
+    <link rel="stylesheet" href="./css/demo.css">
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="./js/jquery.burgermenu.min.js"></script>
+  </head>
+
+  <body>
+    <a id="burgermenu-toggle" href="#menu-example">Toggle Menu</a>
+    <div class="page-wrapper">
+      <h1>BurgerMenu demo/test page</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipisicing elit</li>
+        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+        <li>Ut enim ad minim veniam</li>
+      </ul>
+      <h2>More text to force scroll</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipisicing elit</li>
+        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+        <li>Ut enim ad minim veniam</li>
+      </ul>
+    </div>
+
+    <nav id="menu-example" class="burgermenu-left">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li class="has-children">
+          <a href="#">Slide Panel Submenu</a>
+          <ul class="is-children">
+            <li class="back"><a href="#">&lt; Back</a></li>
+            <li><a href="#">Submenu element</a></li>
+            <li><a href="#">Submenu element</a></li>
+            <li><a href="#">Submenu element</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Dropdown Submenu</a>
+          <ul>
+            <li><a href="#">Dropdown element</a></li>
+            <li><a href="#">Dropdown element</a></li>
+            <li class="has-children">
+              <a href="#">Dropdown element with submenu</a>
+              <ul class="is-children">
+                <li class="back"><a href="#">&lt; Back</a></li>
+                <li><a href="#">Submenu element</a></li>
+                <li><a href="#">Submenu element</a></li>
+                <li><a href="#">Submenu element</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+        <li><a href="#">1st lv Children</a></li>
+      </ul>
+    </nav>
+
+    <script type="text/javascript">
+      $(function() {
+        $('#menu-example').burgermenu();
+      });
+    </script>
+  </body>
+</html>
