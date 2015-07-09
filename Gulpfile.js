@@ -31,7 +31,7 @@ gulp.task('uglifyjs', function() {
 
 // Sass
 gulp.task('sass', function() {
-  return gulp.src('./src/burgermenu.scss')
+  return gulp.src(['./src/burgermenu.scss', './src/default-theme.scss'])
   .pipe(plumber({ errorHandler: onError }))
   .pipe(sourcemaps.init())
   .pipe(sass())
@@ -49,6 +49,9 @@ gulp.task('demo', function() {
 
 // Default watcher
 gulp.task('default', function() {
+  // Run default build
+  gulp.start('uglifyjs', 'sass');
+
   // Start demo server
   connect.server({
     root: 'demo',
@@ -60,7 +63,7 @@ gulp.task('default', function() {
   gulp.watch('./src/burgermenu.js', ['uglifyjs']);
 
   // Watch Sass
-  gulp.watch('./src/burgermenu.scss', ['sass']);
+  gulp.watch(['./src/burgermenu.scss', './src/default-theme.scss'], ['sass']);
 
   // Watch HTML and livereload
   gulp.watch(['./demo/index.html', './demo/css/demo.css'], ['demo']);

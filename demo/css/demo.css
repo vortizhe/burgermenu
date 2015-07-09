@@ -6,19 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-}
-.burgermenu-left ul {
-  background: #ECECEC;
-}
-.burgermenu-left .dropdown > ul {
-  padding: 10px 0;
-}
-.burgermenu-left li {
-  padding: 10px 20px;
-  border-bottom: 1px solid #AFAFAF;
-}
-.burgermenu-left ul ul {
-  background: #DFDFDF;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 #burgermenu-toggle {
@@ -26,7 +14,7 @@ body {
   display: block;
   top: 0;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background: #000;
   color: #AFAFAF;
   text-decoration: none;
@@ -36,5 +24,5 @@ body {
 }
 
 .page-wrapper {
-  padding: 50px 0 0;
+  padding: 50px 12px 0;
 }
