@@ -1,18 +1,17 @@
-body {
-  -webkit-text-size-adjust: none; }
-
 .burgermenu-left, .burgermenu-right {
   width: 273px;
   position: absolute;
   top: 0;
   bottom: 0;
+  height: 100%;
   z-index: 0;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease; }
-  .burgermenu-left ul, .burgermenu-right ul {
-    position: fixed;
-    overflow: scroll;
+  .burgermenu-left .panel, .burgermenu-right .panel, .burgermenu-left .burgermenu-panel, .burgermenu-right .burgermenu-panel {
+    position: absolute;
+    overflow: hidden;
     overflow-x: hidden;
     overflow-y: auto;
     top: 0;
@@ -24,24 +23,18 @@ body {
     padding: 0;
     list-style: none;
     z-index: 0;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform: none;
-    transform: none; }
-  .burgermenu-left .is-children, .burgermenu-right .is-children {
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    -webkit-overflow-scrolling: touch; }
+  .burgermenu-left .burgermenu-panel, .burgermenu-right .burgermenu-panel {
     left: 273px;
     width: 273px;
     z-index: 2;
     -webkit-transition: all 0.6s ease;
     transition: all 0.6s ease; }
-  .burgermenu-left .has-children.opened > .is-children, .burgermenu-right .has-children.opened > .is-children {
-    z-index: 3;
-    -webkit-transform: translate3d(-273px, 0, 0);
-    transform: translate3d(-273px, 0, 0); }
+    .burgermenu-left .burgermenu-panel.opened, .burgermenu-right .burgermenu-panel.opened {
+      -webkit-transform: translate3d(-273px, 0, 0);
+      transform: translate3d(-273px, 0, 0);
+      z-index: 5; }
   .burgermenu-left .dropdown > ul, .burgermenu-right .dropdown > ul {
-    position: static;
     display: none; }
   .burgermenu-left a, .burgermenu-right a {
     display: block; }
@@ -59,7 +52,6 @@ body {
 .page-wrapper {
   position: relative;
   z-index: 10;
-  overflow: hidden;
   width: 100%;
   min-width: 320px;
   -webkit-transition: all 0.6s ease;
@@ -72,14 +64,14 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999999;
-  background: rgba(0, 0, 0, 0.15); }
+  z-index: 999999; }
 
 .opened-left, .opened-right {
   overflow: hidden;
-  position: relative; }
+  height: 100%; }
   .opened-left body, .opened-right body {
-    overflow: hidden; }
+    overflow: hidden;
+    height: 100%; }
   .opened-left .page-wrapper, .opened-right .page-wrapper {
     min-height: 100vh;
     z-index: 0; }

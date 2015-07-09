@@ -45,6 +45,19 @@
       $html.toggleClass('opened-' + opts.position);
     });
 
+    $el.find(opts.children_selector).each(function(i, item) {
+      var $item = $(item),
+          child_id = 'bm-panel-' + i;
+
+      $item.siblings('a').attr('href', '#' + child_id);
+      $item.remove();
+
+      $el.append($item);
+      $item.wrap("<div class='burgermenu-panel' id='" + child_id + "'/>");
+    });
+
+    $el.find('.active').closest('.burgermenu-panel').addClass('opened');
+
     $document.on('click touchstart', '#burgermenu-blocker, ' + opts.toggle_selector, function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -54,12 +67,12 @@
     // Bind open/close submenu event
     $el.on('click', opts.parent_selector + ' > a', function(e) {
       e.preventDefault();
-      $(this).closest(opts.parent_selector).toggleClass('opened');
+      $($(this).attr('href')).toggleClass('opened');
     });
 
     $el.on('click', opts.back_selector, function(e) {
       e.preventDefault();
-      $(this).closest(opts.parent_selector).toggleClass('opened');
+      $(this).closest('.burgermenu-panel').toggleClass('opened');
     });
 
     $el.on('click', opts.dropdown_selector + ' > a', function(e) {
