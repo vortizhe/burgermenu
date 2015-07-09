@@ -42,7 +42,7 @@ $menu-width: 273px !default;
     }
   }
   .dropdown {
-    > ul {
+    .dropdown-children {
       display: none;
     }
   }

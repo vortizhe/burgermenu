@@ -34,7 +34,7 @@
       -webkit-transform: translate3d(-273px, 0, 0);
       transform: translate3d(-273px, 0, 0);
       z-index: 5; }
-  .burgermenu-left .dropdown > ul, .burgermenu-right .dropdown > ul {
+  .burgermenu-left .dropdown .dropdown-children, .burgermenu-right .dropdown .dropdown-children {
     display: none; }
   .burgermenu-left a, .burgermenu-right a {
     display: block; }
