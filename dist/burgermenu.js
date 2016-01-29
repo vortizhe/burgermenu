@@ -9,16 +9,6 @@
  * Released on: January 29, 2016
  */
   
-/*!
- * Burger Menu
- * Another simple off canvas side menu with CSS3 transforms triggered by jQuery plugin.
- *
- * http://github.com/vortizhe/burgermenu
- *
- * Copyright (c) 2015 Victor Ortiz
- * Licensed under the MIT license.
- */
-
 ;(function ($, window, undefined) {
 
   var $document = $(window.document),
