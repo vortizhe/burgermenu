@@ -1,3 +1,13 @@
+/*!
+ * Burgermenu 0.1.0
+ * Simple off canvas menu with hardware accelerated transitions and amazing native behavior.
+ * 
+ * https://github.com/vortizhe/burgermenu
+ * 
+ * Copyright 2016, Victor Ortiz. Licensed under MIT.
+ * 
+ * Released on: January 29, 2016
+ */
 .burgermenu-left, .burgermenu-right {
   width: 273px;
   position: absolute;
@@ -8,46 +18,59 @@
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease; }
-  .burgermenu-left .panel, .burgermenu-right .panel, .burgermenu-left .burgermenu-panel, .burgermenu-right .burgermenu-panel {
-    position: absolute;
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    z-index: 0;
-    -webkit-overflow-scrolling: touch; }
-  .burgermenu-left .burgermenu-panel, .burgermenu-right .burgermenu-panel {
-    left: 273px;
-    width: 273px;
-    z-index: 2;
-    -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease; }
-    .burgermenu-left .burgermenu-panel.opened, .burgermenu-right .burgermenu-panel.opened {
-      -webkit-transform: translate3d(-273px, 0, 0);
-      transform: translate3d(-273px, 0, 0);
-      z-index: 5; }
-  .burgermenu-left .dropdown .dropdown-children, .burgermenu-right .dropdown .dropdown-children {
-    display: none; }
-  .burgermenu-left a, .burgermenu-right a {
-    display: block; }
+  transition: all 0.6s ease;
+}
+
+.burgermenu-left .panel, .burgermenu-right .panel, .burgermenu-left .burgermenu-panel, .burgermenu-right .burgermenu-panel {
+  position: absolute;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.burgermenu-left .burgermenu-panel, .burgermenu-right .burgermenu-panel {
+  left: 273px;
+  width: 273px;
+  z-index: 2;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.burgermenu-left .burgermenu-panel.opened, .burgermenu-right .burgermenu-panel.opened {
+  -webkit-transform: translate3d(-273px, 0, 0);
+  transform: translate3d(-273px, 0, 0);
+  z-index: 5;
+}
+
+.burgermenu-left .dropdown .dropdown-children, .burgermenu-right .dropdown .dropdown-children {
+  display: none;
+}
+
+.burgermenu-left a, .burgermenu-right a {
+  display: block;
+}
 
 .burgermenu-left {
   -webkit-transform: translate3d(-273px, 0, 0);
   transform: translate3d(-273px, 0, 0);
-  left: 0; }
+  left: 0;
+}
 
 .burgermenu-right {
   -webkit-transform: translate3d(273px, 0, 0);
   transform: translate3d(273px, 0, 0);
-  right: 0; }
+  right: 0;
+}
 
 .page-wrapper {
   position: relative;
@@ -55,7 +78,8 @@
   width: 100%;
   min-width: 320px;
   -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease; }
+  transition: all 0.6s ease;
+}
 
 #burgermenu-blocker {
   display: none;
@@ -64,35 +88,58 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999999; }
+  z-index: 999999;
+}
 
-.opened-left, .opened-right {
+.opened-left,
+.opened-right {
   overflow: hidden;
-  height: 100%; }
-  .opened-left body, .opened-right body {
-    overflow: hidden;
-    height: 100%; }
-  .opened-left .page-wrapper, .opened-right .page-wrapper {
-    min-height: 100vh;
-    z-index: 0; }
-  .opened-left .burgermenu-left, .opened-left .burgermenu-right, .opened-right .burgermenu-left, .opened-right .burgermenu-right {
-    z-index: 1; }
-  .opened-left #burgermenu-blocker, .opened-right #burgermenu-blocker {
-    display: block; }
+  height: 100%;
+}
 
-.opened-left .burgermenu-toggle, .opened-left #burgermenu-blocker, .opened-left .page-wrapper {
+.opened-left body,
+.opened-right body {
+  overflow: hidden;
+  height: 100%;
+}
+
+.opened-left .page-wrapper,
+.opened-right .page-wrapper {
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.opened-left .burgermenu-left, .opened-left .burgermenu-right,
+.opened-right .burgermenu-left,
+.opened-right .burgermenu-right {
+  z-index: 1;
+}
+
+.opened-left #burgermenu-blocker,
+.opened-right #burgermenu-blocker {
+  display: block;
+}
+
+.opened-left .burgermenu-toggle,
+.opened-left #burgermenu-blocker,
+.opened-left .page-wrapper {
   -webkit-transform: translate3d(273px, 0, 0);
-  transform: translate3d(273px, 0, 0); }
+  transform: translate3d(273px, 0, 0);
+}
+
 .opened-left .burgermenu-left {
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0);
+}
 
-.opened-right .burgermenu-toggle, .opened-right #burgermenu-blocker, .opened-right .page-wrapper {
+.opened-right .burgermenu-toggle,
+.opened-right #burgermenu-blocker,
+.opened-right .page-wrapper {
   -webkit-transform: translate3d(-273px, 0, 0);
-  transform: translate3d(-273px, 0, 0); }
+  transform: translate3d(-273px, 0, 0);
+}
+
 .opened-right .burgermenu-right {
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-
-/*# sourceMappingURL=maps/burgermenu.css.map */
+  transform: translate3d(0, 0, 0);
+}
