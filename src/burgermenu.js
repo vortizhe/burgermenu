@@ -31,7 +31,8 @@
     $(opts.toggle_selector).addClass('burgermenu-toggle');
 
     // Bind open/close menu event burgermenu.toggle to element menu
-    $el.bind('burgermenu.toggle', function() {
+    $el.bind('burgermenu.toggle', function(e) {
+      e.preventDefault();
       $html.toggleClass('opened-' + opts.position);
     });
 
