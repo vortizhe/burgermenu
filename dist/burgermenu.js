@@ -1,5 +1,5 @@
 /*!
- * Burgermenu 0.1.0
+ * Burgermenu 0.1.1
  * Simple off canvas menu with hardware accelerated transitions and amazing native behavior.
  * 
  * https://github.com/vortizhe/burgermenu
