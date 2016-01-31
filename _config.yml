@@ -4,7 +4,7 @@ email: kespers@gmail.com
 description: >
   BurgerMenu is a simple off canvas menu with hardware accelerated css transitions, amazing native behavior and compatibility from IE >=8.
 baseurl: "/burgermenu"
-url: "http://vortizhe.github.io/burgermenu"
+url: "http://vortizhe.me"
 
 # Build settings
 markdown: redcarpet
