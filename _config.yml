@@ -13,3 +13,17 @@ fenced_code_blocks: true
 redcarpet:
  extensions: ["fenced_code_blocks", "tables"]
 github: [Repository metadata]
+
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Plugins
+sitemap:
+  file: "/sitemap.xml"
+  exclude:
+    - "/feed.xml"
+  include_posts:
+    - "/index.html"
+  change_frequency_name: "change_frequency"
+  priority_name: "priority"
