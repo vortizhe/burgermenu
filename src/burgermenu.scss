@@ -12,7 +12,6 @@ $menu-width: 273px !default;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.6s ease;
           transition: all 0.6s ease;
-  .panel,
   .burgermenu-panel {
     position: absolute;
     overflow: hidden;
@@ -20,25 +19,26 @@ $menu-width: 273px !default;
     overflow-y: auto;
     top: 0;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: $menu-width;
+    width: $menu-width;
     height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
-    z-index: 0;
-    -webkit-overflow-scrolling: touch;
-  }
-  .burgermenu-panel {
-    left: $menu-width;
-    width: $menu-width;
     z-index: 2;
+    background: #FFF;
+    -webkit-overflow-scrolling: touch;
     -webkit-transition: all 0.6s ease;
             transition: all 0.6s ease;
     &.opened {
       -webkit-transform: translate3d(-$menu-width, 0, 0);
-              transform: translate3d(-$menu-width, 0, 0);
+      transform: translate3d(-$menu-width, 0, 0);
       z-index: 5;
+    }
+    &:first-child {
+      left: 0;
+      width: 100%;
+      z-index: 0;
     }
   }
   .dropdown {
@@ -48,6 +48,11 @@ $menu-width: 273px !default;
   }
   a {
     display: block;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -89,7 +94,6 @@ $menu-width: 273px !default;
   height: 100%;
   body {
     overflow: hidden;
-    height: 100%;
   }
   .page-wrapper {
     min-height: 100vh;
@@ -103,7 +107,6 @@ $menu-width: 273px !default;
   }
 }
 .opened-left {
-  .burgermenu-toggle,
   #burgermenu-blocker,
   .page-wrapper {
     -webkit-transform: translate3d($menu-width, 0, 0);
@@ -115,7 +118,6 @@ $menu-width: 273px !default;
   }
 }
 .opened-right {
-  .burgermenu-toggle,
   #burgermenu-blocker,
   .page-wrapper {
     -webkit-transform: translate3d(-$menu-width, 0, 0);
