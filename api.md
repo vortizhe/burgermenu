@@ -21,14 +21,14 @@ $('your-menu-selector').burgermenu({
 
 ## Parameters
 
- Parameter |  Type  | Default | Description                                
------------|--------|---------|--------------------------------------------
-position  | string | 'left' | Could be `'left'` or `'right'` |           
-toggle_selector | string | '#menu-toggle' | Accepts any sizzle selector
-parent_selector | string | '.has-children' | Accepts any sizzle selector
-children_selector | string | '.is-children' | Accepts any sizzle selector
-dropdown_selector | string | '.dropdown' | Accepts any sizzle selector
-back_selector | string | '.back' | Accepts any sizzle selector
+ Parameter        |  Type  | Default         | Description                                |
+------------------|--------|-----------------|--------------------------------------------|
+position          | string | 'left'          | Could be `'left'` or `'right'`             |           
+toggle_selector   | string | '#menu-toggle'  | Accepts any sizzle selector                |
+parent_selector   | string | '.has-children' | Accepts any sizzle selector                |
+children_selector | string | '.is-children'  | Accepts any sizzle selector                |
+dropdown_selector | string | '.dropdown'     | Accepts any sizzle selector                |
+back_selector     | string | '.back'         | Accepts any sizzle selector                |
 
 ## Toggle Event
 
