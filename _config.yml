@@ -7,12 +7,13 @@ baseurl: "/burgermenu"
 url: "http://vortizhe.me"
 
 # Build settings
-markdown: redcarpet
-highlighter: pygments
-fenced_code_blocks: true
-redcarpet:
- extensions: ["fenced_code_blocks", "tables"]
 github: [Repository metadata]
+excerpt_separator: <!--more-->
+permalink: /blog/:year/:title/
+
+kramdown:
+  hard_wrap: false
+  input: GFM
 
 gems:
   - jekyll-sitemap
