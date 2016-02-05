@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: $bg;
+  background: $col_bg;
 }
 
 * {
@@ -13,13 +13,32 @@ body {
 }
 
 .page-content {
-  padding-top: 120px;
+  padding-top: 110px;
 }
 
 .wrapper {
-  width: 94%;
+  width: 100%;
   max-width: 1200px;
-  min-width: 768px;
-  padding: 35px 0;
+  padding: 0 20px;
   margin: 0 auto;
+}
+
+.row {
+  margin-bottom: 1em;
+}
+
+
+
+@include media($tablet) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
+
+
+
+@include media($mobile) {
+  .page-content {
+    padding-top: 65px;
+  }
 }

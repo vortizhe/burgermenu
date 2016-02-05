@@ -3,28 +3,19 @@
 ---
 @charset "utf-8";
 
-
-$text: #454343;
-$dark_text: #1E1D1D;
-$bg: #F5F5F5;
-$link: #F05220;
-$border: #E7E7EC;
-
-$small-desktop: 1200px;
-$tablet: 1024px;
-
 @mixin media($breakpoint) {
-    @media only screen and (max-width: $breakpoint) {
-        @content;
-    }
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
 }
 
+@import "vars";
 @import "normalize";
 @import "typography";
-@import "tables";
+@import "syntax-highlighting";
 @import "layout";
+@import "tables";
 @import "header";
 @import "footer";
-@import "syntax-highlighting";
 @import "examples";
 @import "burgermenu";

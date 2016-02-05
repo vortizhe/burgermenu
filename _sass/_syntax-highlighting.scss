@@ -1,21 +1,15 @@
 /**
  * Syntax highlighting styles
  */
-code {
-  border: 1px solid #E7E7EC;
-  border-radius: 4px;
-}
 .highlight {
-  background: #fff;
-  padding: 20px;
+  background: #FFF;
+  padding: 15px;
   margin: 1em 0;
-  border: 1px solid #E7E7EC;
   border-radius: 3px;
   code, pre {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-family: 'Inconsolata', monospace;
+    font-family: $mono;
     font-size: 14px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -79,4 +73,14 @@ code {
   .vg    { color: #008080 } // Name.Variable.Global
   .vi    { color: #008080 } // Name.Variable.Instance
   .il    { color: #099 } // Literal.Number.Integer.Long
+}
+
+
+
+@include media($mobile) {
+  .highlight {
+    code, pre {
+      font-size: 12px;
+    }
+  }
 }

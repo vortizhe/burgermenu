@@ -1,10 +1,13 @@
 .site-footer {
   background: #fff;
-  border-top: 1px solid $border;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid $col_border;
   .copy {
     margin: 0;
     font-size: 16px;
-    color: $text;
+    line-height: 1.5;
+    color: $col_text;
     a {
       border-bottom: 0;
     }

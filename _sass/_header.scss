@@ -4,33 +4,51 @@
   right: 0;
   left: 0;
   background: rgba(#fff, 0.9);
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid $col_border;
   z-index: 1;
+  box-shadow: 0 0 1px rgba(0,0,0,.25);
   .wrapper {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .logo {
     display: block;
     float: left;
-    padding: 45px 0 35px 112px;
+    padding: 35px 0 35px 145px;
     background: url('../images/logo.png') no-repeat left center;
     border: 0;
-    color: $text;
+    color: $col_text;
     font-size: 32px;
     font-weight: 300;
   }
   .site-nav {
     float: right;
-    padding: 45px 0 35px;
+    padding: 35px 0;
+    font-size: 18px;
     a {
       display: inline-block;
-      padding: 7px 10px;
+      padding: 7px 0 7px 10px;
       border-bottom: 2px solid transparent;
-      font-size: 18px;
-      color: rgba($link, 0.6);
+      color: rgba($col_link, 0.6);
       &.active {
-        color: $link;
+        color: $col_link;
       }
+    }
+  }
+}
+
+@include media($mobile) {
+  .site-header {
+    .logo {
+      width: 55px;
+      height: 65px;
+      padding: 15px 0;
+      font: 0/0 a;
+      background-size: 55px 30px;
+    }
+    .site-nav {
+      padding: 15px 0;
+      font-size: 16px;
     }
   }
 }

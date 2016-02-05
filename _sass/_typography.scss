@@ -1,25 +1,25 @@
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  color: $text;
+  font-family: $sans;
+  color: $col_text;
 }
 
 h1 {
   font-size: 33px;
   font-weight: 300;
-  color: $dark_text;
+  color: $col_dark_text;
 }
 
 h2 {
   font-size: 33px;
   font-weight: 300;
-  color: $link;
+  color: $col_link;
 }
 
 h3 {
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid $col_border;
   font-size: 24px;
   font-weight: 400;
-  color: $text;
+  color: $col_text;
 }
 
 p {
@@ -28,14 +28,15 @@ p {
 }
 
 a {
-  color: $link;
+  color: $col_link;
   text-decoration: none;
-  border-bottom: 1px dashed $link;
+  border-bottom: 1px dashed $col_link;
 }
 
 code {
   padding: 1px 5px;
   background: #FFF;
+  font-size: 14px;
 }
 
 .page-content {
