@@ -8,8 +8,6 @@ url: "http://vortizhe.me"
 
 # Build settings
 github: [Repository metadata]
-excerpt_separator: <!--more-->
-permalink: /blog/:year/:title/
 
 kramdown:
   hard_wrap: false
