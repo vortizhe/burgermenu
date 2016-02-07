@@ -1,13 +1,17 @@
 /*!
- * Burgermenu 0.1.1
+ * Burgermenu 0.1.2
  * Simple off canvas menu with hardware accelerated transitions and amazing native behavior.
  * 
  * https://github.com/vortizhe/burgermenu
  * 
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  * 
- * Released on: January 31, 2016
+ * Released on: February 7, 2016
  */
+body {
+  overflow-x: hidden;
+}
+
 .burgermenu-left, .burgermenu-right {
   width: 273px;
   position: absolute;
@@ -98,6 +102,17 @@
   z-index: 999999;
 }
 
+.burgermenu-sticky-head {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
 .opened-left,
 .opened-right {
   overflow: hidden;
@@ -127,7 +142,8 @@
 }
 
 .opened-left #burgermenu-blocker,
-.opened-left .page-wrapper {
+.opened-left .page-wrapper,
+.opened-left .burgermenu-sticky-head {
   -webkit-transform: translate3d(273px, 0, 0);
   transform: translate3d(273px, 0, 0);
 }
@@ -138,7 +154,8 @@
 }
 
 .opened-right #burgermenu-blocker,
-.opened-right .page-wrapper {
+.opened-right .page-wrapper,
+.opened-right .burgermenu-sticky-head {
   -webkit-transform: translate3d(-273px, 0, 0);
   transform: translate3d(-273px, 0, 0);
 }

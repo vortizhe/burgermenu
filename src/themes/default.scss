@@ -56,7 +56,11 @@
   }
 }
 
-.opened-left .burgermenu-toggle {
-  -webkit-transform: translate3d(273px, 0, 0);
-  transform: translate3d(273px, 0, 0);
+.burgermenu-sticky-head {
+  padding: 12px;
+  background: #000;
+  a {
+    text-decoration: none;
+    color: #AFAFAF;
+  }
 }

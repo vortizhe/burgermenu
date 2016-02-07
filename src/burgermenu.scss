@@ -1,6 +1,10 @@
 // vars
 $menu-width: 273px !default;
 
+body {
+  overflow-x: hidden;
+}
+
 %burgermenu {
   width: $menu-width;
   position: absolute;
@@ -88,6 +92,17 @@ $menu-width: 273px !default;
   z-index: 999999;
 }
 
+.burgermenu-sticky-head {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  -webkit-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+}
+
 .opened-left,
 .opened-right {
   overflow: hidden;
@@ -108,7 +123,8 @@ $menu-width: 273px !default;
 }
 .opened-left {
   #burgermenu-blocker,
-  .page-wrapper {
+  .page-wrapper,
+  .burgermenu-sticky-head {
     -webkit-transform: translate3d($menu-width, 0, 0);
             transform: translate3d($menu-width, 0, 0);
   }
@@ -119,7 +135,8 @@ $menu-width: 273px !default;
 }
 .opened-right {
   #burgermenu-blocker,
-  .page-wrapper {
+  .page-wrapper,
+  .burgermenu-sticky-head {
     -webkit-transform: translate3d(-$menu-width, 0, 0);
             transform: translate3d(-$menu-width, 0, 0);
   }
