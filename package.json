@@ -1,6 +1,6 @@
 {
   "name": "Burgermenu",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Simple off canvas menu with hardware accelerated transitions and amazing native behavior.",
   "keywords": ["jquery-plugin", "menu", "offcanvas", "mobile", "responsive"],
   "homepage": "https://github.com/vortizhe/burgermenu",

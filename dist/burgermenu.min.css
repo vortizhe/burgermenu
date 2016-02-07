@@ -9,6 +9,8 @@ body { overflow-x: hidden; }
 
 .burgermenu-left .burgermenu-panel:first-child, .burgermenu-right .burgermenu-panel:first-child { left: 0; width: 100%; z-index: 0; }
 
+.burgermenu-left .burgermenu-panel:first-child.opened, .burgermenu-right .burgermenu-panel:first-child.opened { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
 .burgermenu-left .dropdown .dropdown-children, .burgermenu-right .dropdown .dropdown-children { display: none; }
 
 .burgermenu-left a, .burgermenu-right a { display: block; }
