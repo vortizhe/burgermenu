@@ -22,7 +22,7 @@
 .menu-icon {
   display: inline-block;
   background: url('../images/burgermenu-icon.png') no-repeat left center;
-  padding: 20px 0 20px 60px;
+  padding: 10px 0 10px 60px;
   border-bottom: 0;
   margin: 0 5px;
   &.right {
@@ -64,17 +64,14 @@
 
 
 .page-wrapper {
-  overflow: hidden;
+  overflow-x: hidden;
+  padding: 10px 20px;
+  background: #FFF;
 }
+
 .burgermenu-left,
 .burgermenu-right {
-  background: #dfdfdf;
   a {
-    color: $col_dark_text;
-    padding: 12px 20px;
-    border-bottom: 1px solid #ccc;
-  }
-  .is-children {
-    background: #efefef
+    border: 0;
   }
 }
