@@ -4,15 +4,40 @@ title: Example 2 - BurgerMenu
 slug: examples
 ---
 
-<nav id="menu-example-right" class="burgermenu-right">
-  <ul>
+<nav id="right-example" class="burgermenu-right">
+  <ul class="burgermenu-panel">
     <li><a href="#">Home</a></li>
-    <li><a href="#">First element</a></li>
-    <li><a href="#">Second element</a></li>
-    <li><a href="#">Third element</a></li>
+    <li class="has-children">
+      <a href="#">Slide Panel Submenu</a>
+      <ul class="is-children">
+        <li class="back"><a href="#">Back</a></li>
+        <li><a href="#">Submenu element</a></li>
+        <li><a href="#">Submenu element</a></li>
+        <li><a href="#">Submenu element</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">Dropdown Submenu</a>
+      <ul class="dropdown-children">
+        <li><a href="#">Dropdown element</a></li>
+        <li><a href="#">Dropdown element</a></li>
+        <li><a href="#">Dropdown element</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
+<div class="burgermenu-sticky-head">
+  <a id="burgermenu-toggle" href="#menu-example" class="menu-icon right">Toggle Menu</a>
+</div>
+
 <div class="page-wrapper">
-  <a id="menu-toggle" href="#menu-example" class="menu-icon right">Toggle Menu</a>
+  <h1>Demo 1 example</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipisicing elit</li>
+    <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ul>
 </div>

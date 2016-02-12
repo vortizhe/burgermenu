@@ -62,16 +62,18 @@
   }
 }
 
+.demo {
+  .page-wrapper {
+    padding: 80px 20px;
+    background: #FFF;
+  }
 
-.page-wrapper {
-  overflow-x: hidden;
-  padding: 10px 20px;
-  background: #FFF;
-}
-
-.burgermenu-left,
-.burgermenu-right {
-  a {
-    border: 0;
+  .burgermenu-sticky-head {
+    padding: 6px 12px;
+    background: #EFEFEF;
+    a {
+      text-decoration: none;
+      color: #666;
+    }
   }
 }
