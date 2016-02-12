@@ -8,44 +8,13 @@ slug: get-started
 
 ## 1. Download and install
 
-In order to use BurgerMenu, you must include the JavaScript and CSS files to your project. You cant get these files from many diferent locations.
+You can download the last [master](https://github.com/vortizhe/burgermenu/archive/master.zip) version from GitHub.
 
-### Downloading the code locally
-
-You can download the last [script](https://raw.githubusercontent.com/vortizhe/burgermenu/master/dist/jquery.burgermenu.min.js) and [styles](https://raw.githubusercontent.com/vortizhe/burgermenu/master/dist/burgermenu.css) version from GitHub.
-
-Or you can clone from [BurgerMenu GitHub repository](https://github.com/vortizhe/burgermenu) and copy the `/dist` directory to your project:
-
-```
-$ git clone https://github.com/vortizhe/burgermenu.git
-```
-
-### With bower
-
-BurgerMenu is available as bower package.
-
-```
-$ bower install burgermenu
-```
-
-### As rails gem
-
-If you work with rails, middleman or something compatible with sprockets and assets pipeline, you can include `burgermenu-rails` in your `Gemfile`.
-
-```ruby
-gem 'burgermenu-rails'
-```
-
-And then execute:
-
-```
-$ bundle install
-```
-
+Or clone it from [GitHub repository](https://github.com/vortizhe/burgermenu) and copy the `/dist` directory to your project.
 
 ## 2. Include BurgerMenu files to your layout
 
-In your layout html file:
+There are 3 esential files: structural styles to open/close, theme styles and js script.
 
 ```html
 <!DOCTYPE html>
@@ -53,8 +22,8 @@ In your layout html file:
 <head>
     ...
     <link rel="stylesheet" href="path/to/burgermenu.css">
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="path/to/jquery.burgermenu.min.js"></script>
+    <link rel="stylesheet" href="path/to/themes/default.css">
+    <script src="path/to/burgermenu.min.js"></script>
     ...
 </head>
 <body>
@@ -71,12 +40,12 @@ Now we need a basic navigation structure somewhere inside body tag.
 <body>
   ...
   <nav id="menu-example" class="burgermenu-left">
-    <ul>
+    <ul class="burgermenu-panel">
       <li><a href="#">Home</a></li>
       <li class="has-children">
         <a href="#">Slide Panel Submenu</a>
         <ul class="is-children">
-          <li class="back"><a href="#">&lt; Back</a></li>
+          <li class="back"><a href="#">Back</a></li>
           <li><a href="#">Submenu element</a></li>
           <li><a href="#">Submenu element</a></li>
           <li><a href="#">Submenu element</a></li>
@@ -84,7 +53,7 @@ Now we need a basic navigation structure somewhere inside body tag.
       </li>
       <li class="dropdown">
         <a href="#">Dropdown Submenu</a>
-        <ul>
+        <ul class="dropdown-children">
           <li><a href="#">Dropdown element</a></li>
           <li><a href="#">Dropdown element</a></li>
           <li><a href="#">Dropdown element</a></li>
@@ -102,20 +71,23 @@ Now we need a basic navigation structure somewhere inside body tag.
 ```html
 <body>
   <div class="page-wrapper">
-  	<a id="menu-toggle" href="#menu-example">Toggle Menu</a>
   	...
   </div>
 </body>
 ```
 
-## 5. Initialize BurgerMenu
+## 5. Add a stiky header with link to burgermenu id element
+
+```html
+<div class="burgermenu-sticky-head">
+  <a id="burgermenu-toggle" href="#menu-example">Toggle Menu</a>
+</div>
+```
+
+## 6. Initialize BurgerMenu
 
 ```js
 $(function() {
   $('#menu-example').burgermenu();
 });
 ```
-
-
-
-
