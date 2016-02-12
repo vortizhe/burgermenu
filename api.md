@@ -6,7 +6,7 @@ slug: api
 
 # BurgerMenu API
 
-You can initialize the plugin with an option object as parameter.
+You can initialize the plugin with an options object as first parameter.
 
 ```js
 $('your-menu-selector').burgermenu({
@@ -32,7 +32,7 @@ back_selector     | string | '.back'         | Accepts any sizzle selector      
 
 ## Toggle Event
 
-You can trigger manualy a custom event to toggle the menu.
+You can open/close burgermenu from any element triggering manualy a custom event.
 
 ```js
 $('your-menu-selector').trigger('burgermenu.toggle')
