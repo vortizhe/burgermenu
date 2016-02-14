@@ -22,8 +22,8 @@ body {
   z-index: 0;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .burgermenu-left .burgermenu-panel, .burgermenu-right .burgermenu-panel {
@@ -42,8 +42,8 @@ body {
   z-index: 2;
   background: #FFF;
   -webkit-overflow-scrolling: touch;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .burgermenu-left .burgermenu-panel.opened, .burgermenu-right .burgermenu-panel.opened {
@@ -94,8 +94,8 @@ body {
   z-index: 10;
   width: 100%;
   min-width: 320px;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 #burgermenu-blocker {
@@ -115,8 +115,10 @@ body {
   left: 0;
   width: 100%;
   z-index: 11;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .opened-left,

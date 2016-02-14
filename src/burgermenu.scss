@@ -1,6 +1,6 @@
 // vars
 $menu-width: 273px !default;
-$bg-transition: all 0.6s ease;
+$bg-transition: all 0.4s ease-out;
 
 @mixin bg-transition {
   -webkit-transition: $bg-transition;
@@ -107,8 +107,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 11;
-  -webkit-transition: all 0.6s ease;
-          transition: all 0.6s ease;
+  @include bg-transition;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .opened-left,
