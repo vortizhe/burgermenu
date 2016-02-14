@@ -72,11 +72,6 @@
   font-size: 20px;
 }
 
-.burgermenu-left .burgermenu-panel,
-.burgermenu-right .burgermenu-panel {
-  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.35) inset;
-}
-
 .burgermenu-sticky-head {
   padding: 12px;
   background: #000;
@@ -85,4 +80,9 @@
 .burgermenu-sticky-head a {
   text-decoration: none;
   color: #AFAFAF;
+}
+
+.opened-left .page-wrapper,
+.opened-right .page-wrapper {
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.35);
 }
