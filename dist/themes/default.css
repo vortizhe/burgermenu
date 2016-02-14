@@ -6,8 +6,14 @@
  * 
  * Copyright 2016, Victor Ortiz. Licensed under MIT.
  * 
- * Released on: February 8, 2016
+ * Released on: February 14, 2016
  */
+.burgermenu-left,
+.burgermenu-right {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
 .burgermenu-left a,
 .burgermenu-right a {
   text-decoration: none;
@@ -57,19 +63,19 @@
   transform: rotate(-90deg);
 }
 
-.burgermenu-left .back a,
-.burgermenu-right .back a {
-  padding: 15px 10px 15px 25px;
+.burgermenu-left .back,
+.burgermenu-right .back {
+  display: block;
+  padding: 15px 10px;
 }
 
 .burgermenu-left .back:before,
 .burgermenu-right .back:before {
   content: '\00ab';
-  position: absolute;
-  left: 10px;
-  top: 12px;
-  color: #666;
+  display: inline-block;
+  margin-right: 0.285em;
   font-size: 20px;
+  line-height: 16px;
 }
 
 .burgermenu-sticky-head {

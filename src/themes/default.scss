@@ -1,5 +1,7 @@
 .burgermenu-left,
 .burgermenu-right {
+  font-size: 14px;
+  line-height: 1.35;
   a {
     text-decoration: none;
     padding: 15px 25px 15px 10px;
@@ -39,16 +41,14 @@
     }
   }
   .back {
-    a {
-      padding: 15px 10px 15px 25px;
-    }
+    display: block;
+    padding: 15px 10px;
     &:before {
       content: '\00ab';
-      position: absolute;
-      left: 10px;
-      top: 12px;
-      color: #666;
+      display: inline-block;
+      margin-right: 0.285em;
       font-size: 20px;
+      line-height: 16px;
     }
   }
 }
