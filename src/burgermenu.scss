@@ -1,6 +1,6 @@
 // vars
 $menu-width: 273px !default;
-$bg-transition: all 0.4s ease-out;
+$bg-transition: transform 0.4s ease-out;
 
 @mixin bg-transition {
   -webkit-transition: $bg-transition;
@@ -10,7 +10,6 @@ $bg-transition: all 0.4s ease-out;
 html,
 body {
   overflow-x: hidden;
-  height: 100%;
 }
 
 %burgermenu {

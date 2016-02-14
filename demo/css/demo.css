@@ -20,11 +20,17 @@ body {
   background: rgba(255,255,255,.65);
   padding: 15px;
   border-bottom: 1px rgba(0,0,0,.65);
+  box-shadow: 0 0 3px rgba(0,0,0,.85);
+}
+.opened-left .burgermenu-sticky-head {
   box-shadow: 3px 0 3px rgba(0,0,0,.85);
 }
+.opened-right .burgermenu-sticky-head {
+  box-shadow: -3px 0 3px rgba(0,0,0,.85);
+}
 
-.burgermenu-toggle {
-  
+.burgermenu-toggle.right {
+  float: right;
 }
 
 .burgermenu-sticky-head a {
@@ -34,13 +40,13 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .page-wrapper {
+  html {
     background: #87C150;
   }
 }
 
 @media (max-width: 767px) {
-  .page-wrapper {
+  html {
     background: #5E89B6;
   }
 }
