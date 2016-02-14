@@ -107,7 +107,7 @@
   });
 
   gulp.task('open', function () {
-    return gulp.src(paths.demo + 'index.html').pipe(open({ uri: 'http://localhost:3000/' + paths.demo + 'index.html'}));
+    return gulp.src(paths.demo + 'demo1.html').pipe(open({ uri: 'http://localhost:3000/' + paths.demo + 'demo1.html'}));
   });
   gulp.task('dist', ['styles', 'scripts', 'build']);
 
