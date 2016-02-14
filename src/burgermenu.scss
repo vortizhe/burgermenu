@@ -41,7 +41,8 @@ body {
     @include bg-transition;
     &.opened {
       -webkit-transform: translate3d(-$menu-width, 0, 0);
-      transform: translate3d(-$menu-width, 0, 0);
+          -ms-transform: translateX(-$menu-width);
+              transform: translate3d(-$menu-width, 0, 0);
       z-index: 5;
     }
     &:first-child {
@@ -50,7 +51,8 @@ body {
       z-index: 0;
       &.opened {
         -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+            -ms-transform: translateX(0);
+                transform: translate3d(0, 0, 0);
       }
     }
   }
@@ -72,12 +74,14 @@ body {
 .burgermenu-left {
   @extend %burgermenu;
   -webkit-transform: translate3d(-$menu-width, 0, 0);
+      -ms-transform: translateX(-$menu-width);
           transform: translate3d(-$menu-width, 0, 0);
   left: 0;
 }
 .burgermenu-right {
   @extend %burgermenu;
   -webkit-transform: translate3d($menu-width, 0, 0);
+      -ms-transform: translateX($menu-width);
           transform: translate3d($menu-width, 0, 0);
   right: 0;
 }
@@ -109,6 +113,7 @@ body {
   z-index: 11;
   @include bg-transition;
   -webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translateX(0);
           transform: translate3d(0, 0, 0);
 }
 
@@ -137,10 +142,12 @@ body {
   .page-wrapper,
   .burgermenu-sticky-head {
     -webkit-transform: translate3d($menu-width, 0, 0);
+        -ms-transform: translateX($menu-width);
             transform: translate3d($menu-width, 0, 0);
   }
   .burgermenu-left {
     -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translateX(0);
             transform: translate3d(0, 0, 0);
   }
 }
@@ -149,10 +156,12 @@ body {
   .page-wrapper,
   .burgermenu-sticky-head {
     -webkit-transform: translate3d(-$menu-width, 0, 0);
+        -ms-transform: translateX(-$menu-width);
             transform: translate3d(-$menu-width, 0, 0);
   }
   .burgermenu-right {
     -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translateX(0);
             transform: translate3d(0, 0, 0);
   }
 }
