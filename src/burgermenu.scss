@@ -110,14 +110,16 @@ body {
 
 .opened-left,
 .opened-right {
-  overflow: hidden;
-  height: 100%;
+  &,
   body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
   }
   .page-wrapper {
-    min-height: 100vh;
-    z-index: 0;
+    position: relative;
+    height: 100%;
   }
   %burgermenu {
     z-index: 1;

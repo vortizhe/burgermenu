@@ -120,20 +120,19 @@ body {
 }
 
 .opened-left,
-.opened-right {
-  overflow: hidden;
-  height: 100%;
-}
-
 .opened-left body,
+.opened-right,
 .opened-right body {
+  position: fixed;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
 .opened-left .page-wrapper,
 .opened-right .page-wrapper {
-  min-height: 100vh;
-  z-index: 0;
+  position: relative;
+  height: 100%;
 }
 
 .opened-left .burgermenu-left, .opened-left .burgermenu-right,
