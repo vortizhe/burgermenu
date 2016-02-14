@@ -11,4 +11,36 @@ body {
 
 .page-wrapper {
   padding: 50px 12px;
+  background: #D1573E;
+  color: #FFF;
+}
+
+
+.burgermenu-sticky-head {
+  background: rgba(255,255,255,.65);
+  padding: 15px;
+  border-bottom: 1px rgba(0,0,0,.65);
+  box-shadow: 3px 0 3px rgba(0,0,0,.85);
+}
+
+.burgermenu-toggle {
+  
+}
+
+.burgermenu-sticky-head a {
+  text-decoration: none;
+  color: #454545;
+  line-height: 1.25;
+}
+
+@media (max-width: 1024px) {
+  .page-wrapper {
+    background: #87C150;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-wrapper {
+    background: #5E89B6;
+  }
 }

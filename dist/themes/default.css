@@ -79,13 +79,14 @@
 }
 
 .burgermenu-sticky-head {
-  padding: 12px;
-  background: #000;
+  padding: 15px;
+  background: #343C9F;
 }
 
 .burgermenu-sticky-head a {
   text-decoration: none;
-  color: #AFAFAF;
+  color: #EFEFEF;
+  line-height: 1.25;
 }
 
 .opened-left .page-wrapper,
