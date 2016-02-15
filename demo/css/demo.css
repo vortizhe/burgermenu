@@ -3,6 +3,10 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+html {
+  background: #D1573E;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,7 +15,6 @@ body {
 
 .page-wrapper {
   padding: 50px 12px;
-  background: #D1573E;
   color: #FFF;
 }
 
