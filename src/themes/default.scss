@@ -1,0 +1,71 @@
+.burgermenu-left,
+.burgermenu-right {
+  font-size: 14px;
+  line-height: 1.35;
+  a {
+    text-decoration: none;
+    padding: 15px 25px 15px 10px;
+    color: #666;
+  }
+  li {
+    position: relative;
+    border-bottom: 1px solid #CCC;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  .has-children,
+  .dropdown {
+    &:after {
+      content: '\00bb';
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      color: #666;
+      font-size: 20px;
+    }
+  }
+  .dropdown {
+    &:after {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+    }
+    .dropdown-children {
+      display: none;
+      background: #F5F5F5;
+      border-top: 1px solid #CCC;
+    }
+    &.opened:after {
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+  }
+  .back {
+    display: block;
+    padding: 15px 10px;
+    &:before {
+      content: '\00ab';
+      display: inline-block;
+      margin-right: 0.285em;
+      font-size: 20px;
+      line-height: 16px;
+    }
+  }
+}
+
+.burgermenu-sticky-head {
+  padding: 15px;
+  background: #343C9F;
+  a {
+    text-decoration: none;
+    color: #EFEFEF;
+    line-height: 1.25;
+  }
+}
+
+.opened-left,
+.opened-right {
+  .page-wrapper {
+    box-shadow: 0 -3px 6px rgba(0,0,0,.35);
+  }
+}
