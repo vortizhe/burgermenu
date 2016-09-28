@@ -1,0 +1,95 @@
+/*!
+ * Burgermenu 0.1.4
+ * Simple off canvas menu with hardware accelerated transitions and amazing native behavior.
+ * 
+ * https://github.com/vortizhe/burgermenu
+ * 
+ * Copyright 2016, Victor Ortiz. Licensed under MIT.
+ * 
+ * Released on: February 14, 2016
+ */
+.burgermenu-left,
+.burgermenu-right {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.burgermenu-left a,
+.burgermenu-right a {
+  text-decoration: none;
+  padding: 15px 25px 15px 10px;
+  color: #666;
+}
+
+.burgermenu-left li,
+.burgermenu-right li {
+  position: relative;
+  border-bottom: 1px solid #CCC;
+}
+
+.burgermenu-left li:last-child,
+.burgermenu-right li:last-child {
+  border-bottom: 0;
+}
+
+.burgermenu-left .has-children:after,
+.burgermenu-left .dropdown:after,
+.burgermenu-right .has-children:after,
+.burgermenu-right .dropdown:after {
+  content: '\00bb';
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  color: #666;
+  font-size: 20px;
+}
+
+.burgermenu-left .dropdown:after,
+.burgermenu-right .dropdown:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.burgermenu-left .dropdown .dropdown-children,
+.burgermenu-right .dropdown .dropdown-children {
+  display: none;
+  background: #F5F5F5;
+  border-top: 1px solid #CCC;
+}
+
+.burgermenu-left .dropdown.opened:after,
+.burgermenu-right .dropdown.opened:after {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.burgermenu-left .back,
+.burgermenu-right .back {
+  display: block;
+  padding: 15px 10px;
+}
+
+.burgermenu-left .back:before,
+.burgermenu-right .back:before {
+  content: '\00ab';
+  display: inline-block;
+  margin-right: 0.285em;
+  font-size: 20px;
+  line-height: 16px;
+}
+
+.burgermenu-sticky-head {
+  padding: 15px;
+  background: #343C9F;
+}
+
+.burgermenu-sticky-head a {
+  text-decoration: none;
+  color: #EFEFEF;
+  line-height: 1.25;
+}
+
+.opened-left .page-wrapper,
+.opened-right .page-wrapper {
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.35);
+}

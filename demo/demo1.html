@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>BurgerMenu - jQuery mobile menu</title>
+
+  <link rel="stylesheet" href="../dist/burgermenu.css">
+  <link rel="stylesheet" href="../dist/themes/default.css">
+  <link rel="stylesheet" href="./css/demo.css">
+
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="../dist/burgermenu.js"></script>
+</head>
+
+<body>
+  <div class="burgermenu-sticky-head">
+    <a id="burgermenu-toggle" href="#menu-example">Toggle Menu</a>
+  </div>
+  <div class="page-wrapper">
+    <h1>BurgerMenu demo/test page</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipisicing elit</li>
+      <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+      <li>Ut enim ad minim veniam</li>
+    </ul>
+    <h2>More text to force scroll</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipisicing elit</li>
+      <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+      <li>Ut enim ad minim veniam</li>
+    </ul>
+  </div>
+
+  <nav id="menu-example" class="burgermenu-left">
+    <ul class="burgermenu-panel">
+      <li><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Element with dropdown children</a>
+        <ul class="dropdown-children">
+          <li class="has-children">
+            <a href="#">Element with panel children</a>
+            <ul class="is-children">
+              <li><a href="#" class="back">Back</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+              <li><a href="#">Consectetur adipisicing elit</a></li>
+              <li><a href="#">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a></li>
+              <li><a href="#">Ut enim ad minim veniam</a></li>
+            </ul><!-- .is-children -->
+          </li><!-- .has-children -->
+
+          <li class="has-children">
+            <a href="#">Other element with panel</a>
+            <ul class="is-children">
+              <li><a href="#" class="back">Back</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+              <li><a href="#">Consectetur adipisicing elit</a></li>
+              <li><a href="#">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a></li>
+              <li><a href="#">Ut enim ad minim veniam</a></li>
+            </ul><!-- .is-children -->
+          </li><!-- .has-children -->
+        </ul>
+      </li><!-- .dropdown -->
+
+      <li class="has-children">
+        <a href="#">Element with panel children</a>
+        <ul class="is-children">
+          <li><a href="#" class="back">Back</a></li>
+          <li class="dropdown">
+            <a href="#">Element with dropdown children</a>
+            <ul class="dropdown-children">
+              <li><a href="#">Dropdown Element</a></li>
+              <li><a href="#">Dropdown Element</a></li>
+              <li><a href="#">Dropdown Element</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Consectetur adipisicing elit</a></li>
+          <li><a href="#">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a></li>
+          <li><a href="#">Ut enim ad minim veniam</a></li>
+        </ul><!-- .is-children -->
+      </li><!-- .has-children -->
+
+      <li class="has-children">
+        <a href="#">Element with banner panel</a>
+        <div class="is-children">
+          <a href="#" class="back">Back</a>
+          <img src="http://lorempixel.com/273/380">
+        </div><!-- .is-children -->
+      </li><!-- .has-children -->
+
+      <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+      <li><a href="#">Consectetur adipisicing elit</a></li>
+      <li><a href="#">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a></li>
+      <li><a href="#">Ut enim ad minim veniam</a></li>
+      <li><a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse</a></li>
+    </ul>
+  </nav>
+
+  <script type="text/javascript">
+  $(function() {
+    $('#menu-example').burgermenu();
+  });
+  </script>
+</body>
+</html>

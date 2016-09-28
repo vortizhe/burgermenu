@@ -1,0 +1,44 @@
+/*! Burgermenu 0.1.4 Simple off canvas menu with hardware accelerated transitions and amazing native behavior. https://github.com/vortizhe/burgermenu Copyright 2016, Victor Ortiz. Licensed under MIT. Released on: February 14, 2016 */
+html, body { overflow-x: hidden; }
+
+.burgermenu-left, .burgermenu-right { width: 273px; position: fixed; top: 0; bottom: 0; height: 100%; z-index: 0; overflow: hidden; -webkit-backface-visibility: hidden; -webkit-transition: transform 0.4s ease-out; transition: transform 0.4s ease-out; }
+
+.burgermenu-left .burgermenu-panel, .burgermenu-right .burgermenu-panel { position: absolute; overflow: hidden; overflow-x: hidden; overflow-y: auto; top: 0; bottom: 0; left: 273px; width: 273px; height: 100%; margin: 0; padding: 0; list-style: none; z-index: 2; background: #FFF; -webkit-overflow-scrolling: touch; -webkit-transition: transform 0.4s ease-out; transition: transform 0.4s ease-out; }
+
+.burgermenu-left .burgermenu-panel.opened, .burgermenu-right .burgermenu-panel.opened { -webkit-transform: translate3d(-273px, 0, 0); -ms-transform: translateX(-273px); transform: translate3d(-273px, 0, 0); z-index: 5; }
+
+.burgermenu-left .burgermenu-panel:first-child, .burgermenu-right .burgermenu-panel:first-child { left: 0; width: 100%; z-index: 0; }
+
+.burgermenu-left .burgermenu-panel:first-child.opened, .burgermenu-right .burgermenu-panel:first-child.opened { -webkit-transform: translate3d(0, 0, 0); -ms-transform: translateX(0); transform: translate3d(0, 0, 0); }
+
+.burgermenu-left .dropdown .dropdown-children, .burgermenu-right .dropdown .dropdown-children { display: none; }
+
+.burgermenu-left a, .burgermenu-right a { display: block; }
+
+.burgermenu-left ul, .burgermenu-right ul { list-style: none; padding: 0; margin: 0; }
+
+.burgermenu-left { -webkit-transform: translate3d(-273px, 0, 0); -ms-transform: translateX(-273px); transform: translate3d(-273px, 0, 0); left: 0; }
+
+.burgermenu-right { -webkit-transform: translate3d(273px, 0, 0); -ms-transform: translateX(273px); transform: translate3d(273px, 0, 0); right: 0; }
+
+.page-wrapper { position: relative; z-index: 10; width: 100%; height: 100%; min-width: 320px; -webkit-transition: transform 0.4s ease-out; transition: transform 0.4s ease-out; }
+
+#burgermenu-blocker { display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 999999; }
+
+.burgermenu-sticky-head { position: fixed; display: block; top: 0; left: 0; width: 100%; z-index: 11; -webkit-transition: transform 0.4s ease-out; transition: transform 0.4s ease-out; -webkit-transform: translate3d(0, 0, 0); -ms-transform: translateX(0); transform: translate3d(0, 0, 0); }
+
+.opened-left, .opened-left body, .opened-right, .opened-right body { position: fixed; height: 100%; width: 100%; overflow: hidden; }
+
+.opened-left .page-wrapper, .opened-right .page-wrapper { position: relative; }
+
+.opened-left .burgermenu-left, .opened-left .burgermenu-right, .opened-right .burgermenu-left, .opened-right .burgermenu-right { z-index: 1; }
+
+.opened-left #burgermenu-blocker, .opened-right #burgermenu-blocker { display: block; }
+
+.opened-left #burgermenu-blocker, .opened-left .page-wrapper, .opened-left .burgermenu-sticky-head { -webkit-transform: translate3d(273px, 0, 0); -ms-transform: translateX(273px); transform: translate3d(273px, 0, 0); }
+
+.opened-left .burgermenu-left { -webkit-transform: translate3d(0, 0, 0); -ms-transform: translateX(0); transform: translate3d(0, 0, 0); }
+
+.opened-right #burgermenu-blocker, .opened-right .page-wrapper, .opened-right .burgermenu-sticky-head { -webkit-transform: translate3d(-273px, 0, 0); -ms-transform: translateX(-273px); transform: translate3d(-273px, 0, 0); }
+
+.opened-right .burgermenu-right { -webkit-transform: translate3d(0, 0, 0); -ms-transform: translateX(0); transform: translate3d(0, 0, 0); }

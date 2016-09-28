@@ -1,18 +1,27 @@
 // vars
 $menu-width: 273px !default;
+$bg-transition: transform 0.4s ease-out;
+
+@mixin bg-transition {
+  -webkit-transition: $bg-transition;
+          transition: $bg-transition;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
 
 %burgermenu {
   width: $menu-width;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   height: 100%;
   z-index: 0;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.6s ease;
-          transition: all 0.6s ease;
-  .panel,
+  @include bg-transition;
   .burgermenu-panel {
     position: absolute;
     overflow: hidden;
@@ -20,25 +29,31 @@ $menu-width: 273px !default;
     overflow-y: auto;
     top: 0;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: $menu-width;
+    width: $menu-width;
     height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
-    z-index: 0;
-    -webkit-overflow-scrolling: touch;
-  }
-  .burgermenu-panel {
-    left: $menu-width;
-    width: $menu-width;
     z-index: 2;
-    -webkit-transition: all 0.6s ease;
-            transition: all 0.6s ease;
+    background: #FFF;
+    -webkit-overflow-scrolling: touch;
+    @include bg-transition;
     &.opened {
       -webkit-transform: translate3d(-$menu-width, 0, 0);
+          -ms-transform: translateX(-$menu-width);
               transform: translate3d(-$menu-width, 0, 0);
       z-index: 5;
+    }
+    &:first-child {
+      left: 0;
+      width: 100%;
+      z-index: 0;
+      &.opened {
+        -webkit-transform: translate3d(0, 0, 0);
+            -ms-transform: translateX(0);
+                transform: translate3d(0, 0, 0);
+      }
     }
   }
   .dropdown {
@@ -49,17 +64,24 @@ $menu-width: 273px !default;
   a {
     display: block;
   }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .burgermenu-left {
   @extend %burgermenu;
   -webkit-transform: translate3d(-$menu-width, 0, 0);
+      -ms-transform: translateX(-$menu-width);
           transform: translate3d(-$menu-width, 0, 0);
   left: 0;
 }
 .burgermenu-right {
   @extend %burgermenu;
   -webkit-transform: translate3d($menu-width, 0, 0);
+      -ms-transform: translateX($menu-width);
           transform: translate3d($menu-width, 0, 0);
   right: 0;
 }
@@ -68,9 +90,9 @@ $menu-width: 273px !default;
   position: relative;
   z-index: 10;
   width: 100%;
+  height: 100%;
   min-width: 320px;
-  -webkit-transition: all 0.6s ease;
-          transition: all 0.6s ease;
+  @include bg-transition;
 }
 
 #burgermenu-blocker {
@@ -83,17 +105,30 @@ $menu-width: 273px !default;
   z-index: 999999;
 }
 
+.burgermenu-sticky-head {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  @include bg-transition;
+  -webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translateX(0);
+          transform: translate3d(0, 0, 0);
+}
+
 .opened-left,
 .opened-right {
-  overflow: hidden;
-  height: 100%;
+  &,
   body {
-    overflow: hidden;
+    position: fixed;
     height: 100%;
+    width: 100%;
+    overflow: hidden;
   }
   .page-wrapper {
-    min-height: 100vh;
-    z-index: 0;
+    position: relative;
   }
   %burgermenu {
     z-index: 1;
@@ -103,26 +138,30 @@ $menu-width: 273px !default;
   }
 }
 .opened-left {
-  .burgermenu-toggle,
   #burgermenu-blocker,
-  .page-wrapper {
+  .page-wrapper,
+  .burgermenu-sticky-head {
     -webkit-transform: translate3d($menu-width, 0, 0);
+        -ms-transform: translateX($menu-width);
             transform: translate3d($menu-width, 0, 0);
   }
   .burgermenu-left {
     -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translateX(0);
             transform: translate3d(0, 0, 0);
   }
 }
 .opened-right {
-  .burgermenu-toggle,
   #burgermenu-blocker,
-  .page-wrapper {
+  .page-wrapper,
+  .burgermenu-sticky-head {
     -webkit-transform: translate3d(-$menu-width, 0, 0);
+        -ms-transform: translateX(-$menu-width);
             transform: translate3d(-$menu-width, 0, 0);
   }
   .burgermenu-right {
     -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translateX(0);
             transform: translate3d(0, 0, 0);
   }
 }
