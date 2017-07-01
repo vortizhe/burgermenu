@@ -49,7 +49,7 @@
 
     $el.find('.active').closest('.burgermenu-panel').addClass('opened');
 
-    $document.on('click touchstart', '#burgermenu-blocker, ' + opts.toggle_selector, function(e) {
+    $document.on('click', '#burgermenu-blocker, ' + opts.toggle_selector, function(e) {
       e.preventDefault();
       e.stopPropagation();
       $el.trigger('burgermenu.toggle');
